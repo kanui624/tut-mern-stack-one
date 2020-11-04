@@ -1,6 +1,7 @@
 .user-item {
   width: calc(45% - 2rem);
   list-style: none;
+  margin: 0;
 }
 
 .user-item a {
@@ -21,6 +22,7 @@
 
 .user-item__content {
   padding: 0;
+  margin: 0;
 }
 
 .user-item__image {

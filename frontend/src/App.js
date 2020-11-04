@@ -1,3 +1,4 @@
+// Dependencies
 import React from 'react';
 import {
   BrowserRouter as Router,
@@ -8,14 +9,22 @@ import {
 
 // Pages
 import User from './user/pages/User';
+import NewPlace from './places/pages/NewPlace';
+
+// Components
+import MainNavgation from './shared/components/Navigation/MainNavigation';
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={User} />
-        <Redirect to="/" />
-      </Switch>
+      <MainNavgation />
+      <main>
+        <Switch>
+          <Route exact path="/" component={User} />
+          <Route exact path="/places/new" component={NewPlace} />
+          <Redirect to="/" />
+        </Switch>
+      </main>
     </Router>
   );
 }
