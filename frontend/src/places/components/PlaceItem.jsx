@@ -3,11 +3,11 @@ import React from 'react';
 
 // Components
 import Card from '../../shared/components/UIElements/Card';
+import Button from '../../shared/components/FormElements/Button';
 
 // CSS
 import './PlaceItem.css';
 const PlaceItem = ({
-  key,
   id,
   image,
   title,
@@ -28,9 +28,9 @@ const PlaceItem = ({
           <p>{description}</p>
         </div>
         <div className="place-item__actions">
-          <button>View Place on Map</button>
-          <button>Edit Place</button>
-          <button>Delete</button>
+          <Button inverse>View Place on Map</Button>
+          <Button to={`/places/${id}`}>Edit Place</Button>
+          <Button danger>Delete</Button>
         </div>
       </Card>
     </li>
